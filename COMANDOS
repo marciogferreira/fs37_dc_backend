@@ -12,3 +12,7 @@ ARQUITETURA DO PROJETO
 /routes
 
 server.js
+
+CRIANDO AS TABELAS NO BANCO
+cd database
+node migration.js
