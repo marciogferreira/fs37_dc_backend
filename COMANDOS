@@ -1,0 +1,14 @@
+npm init -y
+npm i nodemon
+npm i express
+npm i sequelize pg pg-hstore
+
+-------------------------------
+ARQUITETURA DO PROJETO
+
+/config
+/models
+/controllers
+/routes
+
+server.js
