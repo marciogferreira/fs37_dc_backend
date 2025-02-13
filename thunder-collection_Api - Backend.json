@@ -1,0 +1,185 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Api - Backend",
+    "collectionId": "f8727a3d-ff06-4911-96a5-24783663dfb2",
+    "dateExported": "2025-02-13T00:11:15.305Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "35558ac9-e2b2-4819-98c7-5307e851c699",
+            "name": "usuarios",
+            "containerId": "",
+            "created": "2025-02-13T00:09:07.874Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "e591e0a6-ac82-4f21-b156-50b0cac48162",
+            "name": "reservas",
+            "containerId": "",
+            "created": "2025-02-13T00:10:45.016Z",
+            "sortNum": 15000
+        },
+        {
+            "_id": "9d757390-83e4-41e3-9d8a-19e228ac2b20",
+            "name": "clientes",
+            "containerId": "",
+            "created": "2025-02-13T00:09:14.180Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "f92d6914-49d8-4063-b083-3760a608f9c6",
+            "colId": "f8727a3d-ff06-4911-96a5-24783663dfb2",
+            "containerId": "35558ac9-e2b2-4819-98c7-5307e851c699",
+            "name": "Listar",
+            "url": "http://localhost:3000/usuarios?nome&email=gmail.com",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-02-13T00:09:32.679Z",
+            "modified": "2025-02-13T00:09:32.679Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "nome",
+                    "value": "",
+                    "isPath": false
+                },
+                {
+                    "name": "email",
+                    "value": "gmail.com",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "0c390bb8-7bda-40a5-a28d-369829056a0c",
+            "colId": "f8727a3d-ff06-4911-96a5-24783663dfb2",
+            "containerId": "e591e0a6-ac82-4f21-b156-50b0cac48162",
+            "name": "Listar",
+            "url": "http://localhost:3000/reservas",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-02-13T00:10:45.016Z",
+            "modified": "2025-02-13T00:10:57.960Z",
+            "headers": []
+        },
+        {
+            "_id": "492a1514-a2a8-449f-8049-63fcb3cb3a70",
+            "colId": "f8727a3d-ff06-4911-96a5-24783663dfb2",
+            "containerId": "35558ac9-e2b2-4819-98c7-5307e851c699",
+            "name": "Consultar Por Id",
+            "url": "http://localhost:3000/usuarios/3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-02-13T00:09:41.639Z",
+            "modified": "2025-02-13T00:09:41.639Z",
+            "headers": []
+        },
+        {
+            "_id": "90e9603e-f873-4cef-afe0-15843c9c7cd4",
+            "colId": "f8727a3d-ff06-4911-96a5-24783663dfb2",
+            "containerId": "e591e0a6-ac82-4f21-b156-50b0cac48162",
+            "name": "Consultar Por Id",
+            "url": "http://localhost:3000/usuarios/3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-02-13T00:10:45.017Z",
+            "modified": "2025-02-13T00:10:45.016Z",
+            "headers": []
+        },
+        {
+            "_id": "a1cc8faa-9eee-45e6-9b89-06c7bab7c123",
+            "colId": "f8727a3d-ff06-4911-96a5-24783663dfb2",
+            "containerId": "35558ac9-e2b2-4819-98c7-5307e851c699",
+            "name": "Deletar",
+            "url": "http://localhost:3000/usuarios/3",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2025-02-13T00:09:48.590Z",
+            "modified": "2025-02-13T00:09:48.590Z",
+            "headers": []
+        },
+        {
+            "_id": "2344a5ad-1eae-4942-b5c8-62bbb596f792",
+            "colId": "f8727a3d-ff06-4911-96a5-24783663dfb2",
+            "containerId": "e591e0a6-ac82-4f21-b156-50b0cac48162",
+            "name": "Deletar",
+            "url": "http://localhost:3000/usuarios/3",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2025-02-13T00:10:45.018Z",
+            "modified": "2025-02-13T00:10:45.016Z",
+            "headers": []
+        },
+        {
+            "_id": "20230be8-f61d-4f58-a748-1c4be553e960",
+            "colId": "f8727a3d-ff06-4911-96a5-24783663dfb2",
+            "containerId": "35558ac9-e2b2-4819-98c7-5307e851c699",
+            "name": "Criar",
+            "url": "http://localhost:3000/usuarios",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2025-02-13T00:09:54.231Z",
+            "modified": "2025-02-13T00:09:54.231Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Filippe\",\n  \"email\": \"filippe@gmail.com\",\n  \"senha\": \"123123\",\n  \"status\": true\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9aba8ae6-60fd-40cc-bcd7-775f95f31b80",
+            "colId": "f8727a3d-ff06-4911-96a5-24783663dfb2",
+            "containerId": "e591e0a6-ac82-4f21-b156-50b0cac48162",
+            "name": "Criar",
+            "url": "http://localhost:3000/reservas",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2025-02-13T00:10:45.019Z",
+            "modified": "2025-02-13T00:11:02.185Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Filippe\",\n  \"email\": \"filippe@gmail.com\",\n  \"senha\": \"123123\",\n  \"status\": true\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "40993410-9623-4c91-9a06-09dd35a6aad8",
+            "colId": "f8727a3d-ff06-4911-96a5-24783663dfb2",
+            "containerId": "35558ac9-e2b2-4819-98c7-5307e851c699",
+            "name": "Atualizar",
+            "url": "http://localhost:3000/usuarios/2",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2025-02-13T00:09:59.439Z",
+            "modified": "2025-02-13T00:09:59.439Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Marcio\",\n  \"email\": \"marcio@gmail.com\",\n  \"senha\": \"123123\",\n  \"status\": true\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "757b73a8-1322-45a0-947f-5497ef407851",
+            "colId": "f8727a3d-ff06-4911-96a5-24783663dfb2",
+            "containerId": "e591e0a6-ac82-4f21-b156-50b0cac48162",
+            "name": "Atualizar",
+            "url": "http://localhost:3000/usuarios/2",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2025-02-13T00:10:45.020Z",
+            "modified": "2025-02-13T00:10:45.016Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Marcio\",\n  \"email\": \"marcio@gmail.com\",\n  \"senha\": \"123123\",\n  \"status\": true\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "nC-XWzt5p-Mh0OGs_RvDcChxKIEYuhpXTcTAiLF_Cn38dFx8-k7Qto69dkTkdGJTvWUjWkHWZCGNS6nrjeXrxg"
+}
