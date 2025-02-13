@@ -10,10 +10,10 @@ UsuarioRoute.get('/usuarios', async (req, res) => {
         const dados = await UsuarioModel.findAll({
             where: {
                 nome: {
-                    [Op.like]: `%${query.nome}%`
+                    [Op.like]: `%${query.nome || ''}%`
                 },
                 email: {
-                      [Op.like]: `%${query.email}%`
+                      [Op.like]: `%${query.email || ''}%`
                 }
             }
         });
