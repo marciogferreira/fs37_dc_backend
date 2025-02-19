@@ -1,0 +1,14 @@
+Arquitetura MVC
+Model - View - Controller
+
+Modelo - Se comunica com Banco
+Controle - É a camada para receber os dados e passar para o Modelo
+Visão - Tela que o Usuario irá ver
+
+----------------------------------------------------------
+
+Programação Orientada a Objetos
+class, Atributos e Métodos
+
+
+
