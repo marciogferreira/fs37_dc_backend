@@ -1,4 +1,4 @@
-import UsuarioModel from './models/UsuarioModel.js';
+import UsuarioModel from '../models/UsuarioModel.js';
 import { Op } from "sequelize";
 
 class UsuarioController {
