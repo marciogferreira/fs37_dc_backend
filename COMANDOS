@@ -16,3 +16,7 @@ server.js
 CRIANDO AS TABELAS NO BANCO
 cd database
 node migration.js
+
+
+Criar Projeto React do Zero
+npm create vite@latest
