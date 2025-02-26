@@ -13,6 +13,14 @@ const ClienteModel = Conexao.define(
             type: DataTypes.STRING,
             allowNull: false
         },
+        cpf: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+            validate: {
+                isCPF: true
+            }
+        },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
