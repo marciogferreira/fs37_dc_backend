@@ -27,7 +27,16 @@ class UsuarioController {
         try {
             const id = req.params.id;
             const dados = await UsuarioModel.findByPk(id);
-            return res.json(dados);
+            if(dados) {
+                return res.json({
+                    message: "Usuario Encontrado.",
+                    data: dados
+                })
+            } else {
+                return res.status(404).json({
+                    message: "Usuario Não Encontrado."
+                })
+            }
         } catch(error) {
             return res.status(500).json(error);
         }
@@ -37,7 +46,10 @@ class UsuarioController {
         try {
             const dados = req.body;
             const resultado = await UsuarioModel.create(dados)
-            return res.json(resultado);
+            return res.json({
+                message: "Usuario Criado com Sucesso.",
+                data: resultado
+            });
         } catch(error) {
             return res.status(500).json(error);
         } 
@@ -48,7 +60,9 @@ class UsuarioController {
             const id = req.params.id;
             const dados = req.body;
             const resultado = await UsuarioModel.update(dados, { where: { id: id } });
-            return res.json(resultado);
+            return res.json({
+                message: "Usuario Atualizado com Sucesso."
+            });
         } catch(error) {
             return res.status(500).json(error);
         }
@@ -62,7 +76,9 @@ class UsuarioController {
                     id: id
                 }
             })
-            return res.json(resultado);
+            return res.json({
+                message: "Usuario Deletado com Sucesso."
+            });
         } catch(error) {
             return res.status(500).json(error);
         }

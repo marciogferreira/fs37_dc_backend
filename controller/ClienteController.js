@@ -7,13 +7,17 @@ class ClienteController {
     async findAll(req, res) {
         try {
             const query = req.query;
+            // SELECT * FROM clientes WHERE nome like '%M%'
             const dados = await ClienteModel.findAll({
                 where: {
                     nome: {
                         [Op.like]: `%${query.nome || ''}%`
                     },
                     email: {
-                          [Op.like]: `%${query.email || ''}%`
+                        [Op.like]: `%${query.email || ''}%`
+                    },
+                    cpf: {
+                        [Op.like]: `%${query.cpf || ''}%`
                     }
                 }
             });
@@ -49,7 +53,10 @@ class ClienteController {
             const id = req.params.id;
             const dados = req.body;
             const resultado = await ClienteModel.update(dados, { where: { id: id } });
-            return res.json(resultado);
+            return res.json({
+                message: 'Cliente atualizado com sucesso',
+                data: resultado
+            });
         } catch(error) {
             return res.status(500).json(error);
         }
@@ -63,7 +70,10 @@ class ClienteController {
                     id: id
                 }
             })
-            return res.json(resultado);
+            return res.json({
+                message: 'Cliente excluído com sucesso',
+                data: resultado
+            });
         } catch(error) {
             return res.status(500).json(error);
         }

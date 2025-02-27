@@ -4,3 +4,7 @@ import UsuarioModel from '../models/UsuarioModel.js';
 import ClienteModel from '../models/ClienteModel.js';
 
 Conexao.sync({ force: false });
+// cd database
+// node migration.js
+
+
