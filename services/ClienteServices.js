@@ -1,4 +1,5 @@
 import ClienteModel from "../models/ClienteModel.js";
+import ErrorServices from "./ErrorServices.js";
 
 class ClienteServices {
     async criarValidarCliente(dados) {
@@ -15,8 +16,7 @@ class ClienteServices {
             return resposta;
 
         } catch(e) {
-        
-            throw new Error(e)
+            return ErrorServices.getError(e);
         }
     }
 }

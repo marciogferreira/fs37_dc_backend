@@ -17,7 +17,7 @@ class UsuarioController {
                 }
             });
             
-            return res.json(dados);
+            return res.status(200).json(dados);
         } catch(error) {
             return res.status(500).json(error);
         }
@@ -28,7 +28,7 @@ class UsuarioController {
             const id = req.params.id;
             const dados = await UsuarioModel.findByPk(id);
             if(dados) {
-                return res.json({
+                return res.status(200).json({
                     message: "Usuario Encontrado.",
                     data: dados
                 })
@@ -46,7 +46,7 @@ class UsuarioController {
         try {
             const dados = req.body;
             const resultado = await UsuarioModel.create(dados)
-            return res.json({
+            return res.status(201).json({
                 message: "Usuario Criado com Sucesso.",
                 data: resultado
             });
@@ -60,7 +60,7 @@ class UsuarioController {
             const id = req.params.id;
             const dados = req.body;
             const resultado = await UsuarioModel.update(dados, { where: { id: id } });
-            return res.json({
+            return res.status(204).json({
                 message: "Usuario Atualizado com Sucesso."
             });
         } catch(error) {
@@ -76,7 +76,7 @@ class UsuarioController {
                     id: id
                 }
             })
-            return res.json({
+            return res.status(204).json({
                 message: "Usuario Deletado com Sucesso."
             });
         } catch(error) {
