@@ -65,6 +65,7 @@ class ClienteController {
     async delete(req, res) {
         try {
             const id = req.params.id;
+            // DELETE FROM clientes WHERE id = 1;
             const resultado = await ClienteModel.destroy({ 
                 where: {
                     id: id
