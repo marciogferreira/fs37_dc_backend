@@ -1,6 +1,7 @@
 import express from 'express'
 import UsuarioModel from '../models/UsuarioModel.js';
 import jwt from 'jsonwebtoken'
+import Helper from '../helpers/Helper.js';
 const PublicRoute = express.Router()
 
 PublicRoute.post('/login', async (req, res) => {
@@ -8,7 +9,7 @@ PublicRoute.post('/login', async (req, res) => {
     const dadosUsuario = await UsuarioModel.findOne({
         where: {
             email: dados.email,
-            senha: dados.senha
+            senha: Helper.getTokenCrypto(dados.senha)
         }
     })
     if(dadosUsuario) {

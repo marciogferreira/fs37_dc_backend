@@ -1,3 +1,4 @@
+import Helper from '../helpers/Helper.js';
 import UsuarioModel from '../models/UsuarioModel.js';
 import { Op } from "sequelize";
 
@@ -45,6 +46,7 @@ class UsuarioController {
     async create(req, res) {
         try {
             const dados = req.body;
+            dados.senha = Helper.getTokenCrypto(dados.senha);
             const resultado = await UsuarioModel.create(dados)
             return res.status(201).json({
                 message: "Usuario Criado com Sucesso.",
