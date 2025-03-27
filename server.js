@@ -4,6 +4,7 @@ import ClienteRoute from './routes/ClienteRoute.js';
 import cors from 'cors'
 import jwt from 'jsonwebtoken'
 import PublicRoute from './routes/PublicRoute.js';
+import 'dotenv/config'
 
 const app = express();
 app.use(express.json())
@@ -20,7 +21,7 @@ app.use(function(req, res, next) {
     const token = req.headers.token;
    
     try {
-        jwt.verify(token, 'D.9X!l77[S^8rermZ^90afFt80Jr.$<qi]gDs7S2@&-ShomBUjn,CjYDF<,AUo}J3}9U>j2@!xU6Lz!j]HOsK[gXOnOes,>OZ8]6{@@ep;{+#Z1O,Z#x|Iq]S8?-BuLM')
+        jwt.verify(token, process.env.SECRET_KEY)
         next();
     } catch(e) {
         return res.json({
