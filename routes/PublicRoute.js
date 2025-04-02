@@ -25,7 +25,7 @@ PublicRoute.post('/login', async (req, res) => {
         })
     } 
     
-    return res.json({
+    return res.status(401).json({
         message: 'Login ou Senha incorreto'
     })
 })

@@ -19,8 +19,8 @@ app.use(PublicRoute)
 // MIddleware localhost:3000/clientes?token=123456
 app.use(function(req, res, next) {
     const token = req.headers.token;
-   
     try {
+        // Verifica se o Token é Válido
         jwt.verify(token, process.env.SECRET_KEY)
         next();
     } catch(e) {
