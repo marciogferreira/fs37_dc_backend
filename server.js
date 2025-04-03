@@ -24,7 +24,7 @@ app.use(function(req, res, next) {
         jwt.verify(token, process.env.SECRET_KEY)
         next();
     } catch(e) {
-        return res.json({
+        return res.status(403).json({
             message: 'Não Autorizado. ' + e.message
         })
     }
