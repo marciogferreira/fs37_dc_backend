@@ -62,7 +62,7 @@ class UsuarioController {
             const id = req.params.id;
             const dados = req.body;
             const resultado = await UsuarioModel.update(dados, { where: { id: id } });
-            return res.status(204).json({
+            return res.status(200).json({
                 message: "Usuario Atualizado com Sucesso."
             });
         } catch(error) {
