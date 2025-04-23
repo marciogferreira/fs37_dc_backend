@@ -33,6 +33,8 @@ app.use(function(req, res, next) {
 app.use(UsuarioRoute);
 app.use(ClienteRoute);
 
-app.listen(3000, 'localhost', () => {
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, 'localhost', () => {
     console.log('Servidor rodando na porta http://localhost:3000');
 })
