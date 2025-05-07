@@ -30,4 +30,22 @@ PublicRoute.post('/login', async (req, res) => {
     })
 })
 
+PublicRoute.post('/cadastrar-usuario', async(req, res) => {
+    try {
+        const dados = req.body;
+        // Criptografando a senha
+        dados.senha = Helper.getTokenCrypto(dados.senha)
+        // Salvando Dados na Base de Dados
+        const result = await UsuarioModel.create(dados);
+        return res.status(200).json({
+            message: 'Usuário criado com sucesso.',
+            data: result
+        })
+    } catch(e) {
+        return res.status(500).json({
+            message: e.message
+        })
+    }
+})
+
 export default PublicRoute
