@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
+    "migration": "node database/migration.js",
     "test": "jest"
   },
   "keywords": [],
